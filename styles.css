@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh; /*full viewport height - need for dynamic sizing to stretch*/
+
+}
+
+.header {
+    background-color: #a5b4fc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for pop effect */
+    grid-column: 2 / 3; /* span across all columns*/
+}
+
+.content {
+    background-color: #e0e7ff;
+    
+}
+
+.sidebar {
+    background-color: #6366f1;
+    grid-row: 1 / 3;
+}
