@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -14,15 +18,44 @@
 .header {
     background-color: #a5b4fc;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for pop effect */
-     z-index: 1; /* added so that shadow would show - header on top of other elements. */
+    z-index: 1; /* added so that shadow would show - header on top of other elements. */
+    display: grid; /*to split into upper and lower controlled halves*/
+    grid-template-rows: 2;
+    grid-template-columns: 1;
+}
+
+.header
+.content {
+    margin-left: 8px;
+    margin-right: 8px; /*to give the same amount of space on left and right between edges.*/
 }
 
 .content {
     background-color: #e0e7ff;
-    
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .sidebar {
     background-color: #6366f1;
     grid-row: 1 / 3;
+    /* decide whether to use grid to space 3 boxes on side */
 }
+
+.side-items {
+    /* to decide whether keep each menuitem div (and apply grid there), or remove and apply grid here in sideitems */
+}
+
+.header-upper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1;
+    overflow: hidden;
+}
+
+.header-lower {
+    display: grid;
+    grid-template-columns: 5;
+    grid-template-rows: 1;
+}
+
