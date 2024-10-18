@@ -24,16 +24,22 @@ body {
     grid-template-columns: 1;
 }
 
-.header
-.content {
-    margin-left: 8px;
-    margin-right: 8px; /*to give the same amount of space on left and right between edges.*/
-}
 
 .content {
     background-color: #e0e7ff;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: grid; /*split into projects in one col, announce and trend in 2nd col*/
+    grid-template-columns: 3fr, 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.content,
+.header,
+.sidebar {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .sidebar {
@@ -60,3 +66,19 @@ body {
     overflow: hidden;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 150);
+    gap: 5px;
+}
+
+.proj-card {
+    background-color: #eef2ff;
+    border-radius: 5px;
+}
+
+.side-content {
+    display: grid;
+    gap: 5px;
+}
