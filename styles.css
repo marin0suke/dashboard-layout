@@ -55,7 +55,8 @@ body {
 
 .header-lower {
     display: grid;
-    grid-template-columns: 5;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: 1;
+    overflow: hidden;
 }
 
