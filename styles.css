@@ -13,8 +13,8 @@
 
 .header {
     background-color: #a5b4fc;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for pop effect */
-    grid-column: 2 / 3; /* span across all columns*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for pop effect */
+     z-index: 1; /* added so that shadow would show - header on top of other elements. */
 }
 
 .content {
