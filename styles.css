@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
 
 .header {
     background-color: #a5b4fc;
+    padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for pop effect */
     z-index: 1; /* added so that shadow would show - header on top of other elements. */
     display: grid; /*to split into upper and lower controlled halves*/
@@ -31,8 +33,10 @@ body {
     padding-bottom: 50px;
     display: grid; /*split into projects in one col, announce and trend in 2nd col*/
     grid-template-columns: 3fr 1fr; /*projects take 3 parts, side content takes 1*/
-    grid-template-rows: auto 1fr; /*auto for heading, 1fr for the rest*/
+    grid-template-rows: auto 1fr; /*auto for heading, 1fr for the rest */
     gap: 20px;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .content h2 {
@@ -50,11 +54,15 @@ body {
 
 .sidebar {
     background-color: #6366f1;
-    grid-row: 1 / 3;
+    grid-row: 1 / -1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
     /* decide whether to use grid to space 3 boxes on side */
 }
 
-.side-items {
+.side-menu {
     /* to decide whether keep each menuitem div (and apply grid there), or remove and apply grid here in sideitems */
 }
 
@@ -76,7 +84,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /*now size of */
     gap: 1rem; /*made relative sizing so can minus space calc for responsiveness*/
-    grid-row: 2;
 }
 
 
@@ -85,24 +92,46 @@ body {
     background-color: #eef2ff;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin: 0;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
 }
 
 .side-content {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 }
 
 .side-item {
-    display: grid;
-    grid-template-rows: auto auto;
+    background-color: #eef2ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.proj-card h3 {
+    font-size: 18px;
+    margin-top: 1em;
+    margin-left: 12px;
+}
 
+.proj-card p {
+    font-size: 14px;
+    margin: 12px;
+    margin-bottom: 50px;
+}
 
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    
+    margin: 0;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.icon {
+   padding: 10px; 
+}
