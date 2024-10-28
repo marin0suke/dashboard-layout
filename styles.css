@@ -27,8 +27,8 @@ body {
 
 .content {
     background-color: #e0e7ff;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     display: grid; /*split into projects in one col, announce and trend in 2nd col*/
     grid-template-columns: 3fr 1fr; /*projects take 3 parts, side content takes 1*/
     grid-template-rows: auto 1fr; /*auto for heading, 1fr for the rest*/
@@ -44,8 +44,8 @@ body {
 .content,
 .header,
 .sidebar {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .sidebar {
@@ -74,8 +74,8 @@ body {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /*now size of */
+    gap: 1rem; /*made relative sizing so can minus space calc for responsiveness*/
     grid-row: 2;
 }
 
