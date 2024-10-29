@@ -75,9 +75,37 @@ body {
 
 .header-upper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: 3;
     grid-template-rows: 1;
     overflow: hidden;
+}
+
+.search-input {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    gap: 10px;
+    align-self: center;
+}
+
+.search {
+    grid-column: 1 / 2;
+}
+
+.search-bar {
+    grid-column: 2 / 3;
+}
+
+.notif-name {
+    grid-column: 3 / 4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.header-upper-name {
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 #search-bar {
@@ -93,7 +121,6 @@ body {
 .notification {
     border: none;
     background: none;
-
 }
 
 .new,
