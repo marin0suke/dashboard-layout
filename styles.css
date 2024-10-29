@@ -106,18 +106,20 @@ body {
     position: relative;
 }
 
-/* .side-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-} */
-
 .announcements-card,
 .trending-card {
     background-color: #eef2ff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-card {
+    margin: 1em;
+}
+
+.side-card p {
+    color: #737373;
 }
 
 .trending,
@@ -166,14 +168,31 @@ body {
     
 }
 
+
+
 .profile div {
     display: grid;
     row-gap: 4px;
 }
 
-.profile > img {
+.profile-image {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     object-fit: cover;
+    margin: 5px;
+}
+
+.mini-bio {
+    color: #737373;
+}
+
+.handle {
+    font-weight: bold;
+}
+
+.header-profile-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
