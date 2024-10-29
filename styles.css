@@ -114,12 +114,21 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.divider {
+    color: #737373;
+}
+
 .side-card {
     margin: 1em;
 }
 
+.side-card > h3 {
+    font-size: 16px;
+}
+
 .side-card p {
     color: #737373;
+    font-size: 14px;
 }
 
 .trending,
@@ -135,9 +144,10 @@ body {
 }
 
 .proj-card p {
-    font-size: 14px;
+    font-size: 16px;
     margin: 12px;
     margin-bottom: 50px;
+    color: #737373;
 }
 
 .icons {
