@@ -254,6 +254,16 @@ body {
 .menu-item {
     display: flex;
     padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .8em;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .profile {
@@ -264,8 +274,6 @@ body {
     padding: 10px;
     
 }
-
-
 
 .profile div {
     display: grid;
